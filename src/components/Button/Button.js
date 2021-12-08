@@ -2,7 +2,7 @@ import React from 'react'
 import { Btn } from './Button.styled';
 import PropTypes from 'prop-types'
 
-const Button = ({type, text, size, padding, width}) => {
+const Button = ({onClick, type, text, size, padding, width}) => {
   switch (size) {
     case "medium":
       padding="10px 15px";
@@ -22,7 +22,8 @@ const Button = ({type, text, size, padding, width}) => {
       break;
   }
 
-  return <Btn type={type} size={size} padding={padding} width={width}>{text}</Btn>;
+  return <Btn onClick={onClick} 
+  type={type} size={size} padding={padding} width={width}>{text}</Btn>;
 };
 
 Button.propTypes = {
