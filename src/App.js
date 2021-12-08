@@ -1,11 +1,10 @@
 import React from 'react'
-import Button from './components/Button/Button'
+import Input from './components/Input/Input'
 
 const App = () => {
   return (
     <div>
-      <h1>Hello World</h1>
-      <Button size="medium" text="teste"/>
+      <Input/>
     </div>
   )
 }
