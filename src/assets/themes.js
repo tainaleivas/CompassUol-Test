@@ -1,13 +1,13 @@
 export const lightTheme = {
-	text: '#000',
+	text: '#212121',
 	avatarTitle: 'rgba(255, 255, 255, 0.3)',
-	background: '#fff',
-	border: '#000'
+	background: '#EEEEEE',
+	border: '#757575'
 }
 
 export const darkTheme = {
-	text: '#fff',
+	text: '#EEEEEE',
 	avatarTitle: 'rgba(255, 255, 255, 0.3)',
-	background: '#000',
-	border: '#fff'
+	background: '#212121',
+	border: '#757575'
 }
