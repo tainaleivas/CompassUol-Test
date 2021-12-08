@@ -1,16 +1,27 @@
-import React from 'react'
-import Input from './components/Input/Input'
-import Paragraph from './components/Paragraph/Paragraph'
-import Title from './components/Title/Title'
+import React from "react";
+import Input from "./components/Input/Input";
+import Paragraph from "./components/Paragraph/Paragraph";
+import Title from "./components/Title/Title";
+import Button from "./components/Button/Button";
+import GlobalStyle from "./assets/GlobalStyle.js";
+import { darkTheme, lightTheme } from "./assets/themes.js";
+import { ThemeProvider } from "styled-components";
 
 const App = () => {
-  return (
-    <div>
-      <Input/>
-      <Paragraph text="Teste"/>
-      <Title text="Titulo"/>
-    </div>
-  )
-}
+  const [theme, setTheme] = React.useState(darkTheme);
 
-export default App
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Button
+        text="Mudar Tema"
+        onClick={() => setTheme(theme === darkTheme ? lightTheme : darkTheme)}
+      />
+      <Input />
+      <Paragraph text="Teste" />
+      <Title text="Titulo" />
+    </ThemeProvider>
+  );
+};
+
+export default App;
