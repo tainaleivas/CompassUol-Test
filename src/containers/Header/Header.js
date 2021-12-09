@@ -20,8 +20,8 @@ const Header = ({ theme, setTheme }) => {
       />
       <Title text="Busque por um perfil no Github" margin="5%" />
       <BoxSearch>
-        <Input size="large" />
-        <Button text="Pesquisar" size="medium" />
+        <Input size="x-large" />
+        <Button text="Pesquisar" size="large" />
       </BoxSearch>
     </ContainerHeader>
   );
