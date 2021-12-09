@@ -1,12 +1,8 @@
 import React from "react";
-import Input from "./components/Input/Input";
-import Paragraph from "./components/Paragraph/Paragraph";
-import Title from "./components/Title/Title";
-import Button from "./components/Button/Button";
 import GlobalStyle from "./assets/GlobalStyle.js";
-import { darkTheme, lightTheme } from "./assets/themes.js";
 import { ThemeProvider } from "styled-components";
-import Avatar from "./components/Avatar/Avatar";
+import Header from "./containers/Header/Header";
+import { darkTheme } from "./assets/themes";
 
 const App = () => {
   const [theme, setTheme] = React.useState(darkTheme);
@@ -14,14 +10,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Button
-        text="Mudar Tema"
-        onClick={() => setTheme(theme === darkTheme ? lightTheme : darkTheme)}
-      />
-      <Input />
-      <Paragraph text="Teste" />
-      <Title text="Titulo" />
-      <Avatar />
+      <Header theme={theme} setTheme={setTheme} />
     </ThemeProvider>
   );
 };

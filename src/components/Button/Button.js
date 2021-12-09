@@ -6,19 +6,19 @@ const Button = ({onClick, type, text, size, padding, width}) => {
   switch (size) {
     case "medium":
       padding="10px 15px";
-      width="7%";
+      width="125px";
       break;
     case "large":
       padding="10px 20px";
-      width="9%";
+      width="150px";
       break;
     case "x-large":
       padding="10px 25px";
-      width="11%";
+      width="200px";
       break;
     default: 
       padding="10px";
-      width="5%";
+      width="100px";
       break;
   }
 
