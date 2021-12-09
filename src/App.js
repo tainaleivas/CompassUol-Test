@@ -6,6 +6,7 @@ import Button from "./components/Button/Button";
 import GlobalStyle from "./assets/GlobalStyle.js";
 import { darkTheme, lightTheme } from "./assets/themes.js";
 import { ThemeProvider } from "styled-components";
+import Avatar from "./components/Avatar/Avatar";
 
 const App = () => {
   const [theme, setTheme] = React.useState(darkTheme);
@@ -20,6 +21,7 @@ const App = () => {
       <Input />
       <Paragraph text="Teste" />
       <Title text="Titulo" />
+      <Avatar />
     </ThemeProvider>
   );
 };
