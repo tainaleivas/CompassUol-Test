@@ -1,11 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Field } from "./Input.styled";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Field } from './Input.styled';
 
-const Input = ({ size, placeholder }) => {
+const Input = ({ size, placeholder, value, onChange }) => {
   return (
     <>
-      <Field size={size} placeholder={placeholder} />
+      <Field
+        size={size}
+        placeholder={placeholder}
+        defaultValue={value}
+        onChange={onChange}
+      />
     </>
   );
 };
@@ -16,8 +21,8 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-  size: "medium",
-  placeholder: "Digite aqui",
+  size: 'medium',
+  placeholder: 'Digite aqui',
 };
 
 export default Input;

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
    * {
@@ -10,10 +10,14 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-      background-color: ${props => props.theme.background};
-      border-color: ${props => props.theme.border};
-      color: ${props => props.theme.text}; 
+      background-color: ${(props) => props.theme.background};
+      border-color: ${(props) => props.theme.border};
+      color: ${(props) => props.theme.text}; 
     }
-  `
+    
+    a {
+      text-decoration: none;
+    }
+  `;
 
-export default GlobalStyle
+export default GlobalStyle;

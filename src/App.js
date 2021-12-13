@@ -1,9 +1,10 @@
-import React from "react";
-import GlobalStyle from "./assets/GlobalStyle.js";
-import { ThemeProvider } from "styled-components";
-import Header from "./containers/Header/Header";
-import Footer from "./containers/Footer/Footer.js";
-import { darkTheme } from "./assets/themes";
+import React from 'react';
+import GlobalStyle from './assets/GlobalStyle.js';
+import { ThemeProvider } from 'styled-components';
+import Header from './containers/Header/Header';
+import Footer from './containers/Footer/Footer.js';
+import { darkTheme } from './assets/themes';
+import { User } from './global/GlobalContext';
 
 const App = () => {
   const [theme, setTheme] = React.useState(darkTheme);
@@ -11,8 +12,10 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header theme={theme} setTheme={setTheme} />
-      <Footer />
+      <User>
+        <Header theme={theme} setTheme={setTheme} />
+        <Footer />
+      </User>
     </ThemeProvider>
   );
 };
