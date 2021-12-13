@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const ContainerFooter = styled.footer`
   width: 100%;
-  height: 30vh;
-  margin: 3% 0;
+  height: auto;
+  margin: 2% 0;
   display: flex;
   justify-content: stretch;
   align-items: center;
@@ -13,7 +13,7 @@ export const ContainerFooter = styled.footer`
 export const BoxButtons = styled.div`
   display: flex;
   justify-content: center;
-  margin: 3% 0;
+  margin: 0;
   button:first-child {
     margin-right: 6%;
   }

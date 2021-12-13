@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerHeader = styled.header`
   width: 100%;
-  height: 50vh;
+  height: auto;
   display: flex;
   justify-content: stretch;
   align-items: center;
@@ -19,9 +19,9 @@ export const ContainerHeader = styled.header`
   }
 `;
 
-export const BoxSearch = styled.div`
+export const BoxSearch = styled.form`
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 `;
